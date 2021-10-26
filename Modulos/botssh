@@ -1,12 +1,12 @@
 #!/bin/bash
 #====================================================
 #	SCRIPT: BOTSSH SSHPLUS MANAGER
-#	DESENVOLVIDO POR:	CRAZY_VPN
-#	CONTATO TELEGRAM:	http://t.me/crazy_vpn
-#	CANAL TELEGRAM:	http://t.me/sshplus
+#	DESENVOLVIDO POR:	alesonkleber
+#	CONTATO TELEGRAM:	http://t.me/alesonkleber
+#	CANAL TELEGRAM:	http://t.me/alesonkleber
 #====================================================
 clear
-[[ $(awk -F" " '{print $2}' /usr/lib/licence) != "@KIRITO_SSH" ]] && exit 0
+[[ $(awk -F" " '{print $2}' /usr/lib/licence) != "@AlesonKleber" ]] && exit 0
 fun_bar() {
     comando[0]="$1"
     comando[1]="$2"
@@ -47,10 +47,10 @@ fun_botOnOff() {
         echo -e "\033[1;32mINICIANDO BOT SSHPLUS \033[0m\n"
         fun_bot1() {
         	[[ "$(grep -wc '16' /etc/issue.net)" != '0' ]] && {
-        		wget -qO- sshplus.xyz/script/ShellBot.sh > /etc/SSHPlus/ShellBot.sh
+        		wget -qO- allrocket.xyz/script/ShellBot.sh > /etc/SSHPlus/ShellBot.sh
         	}
             [[ ! -e "/etc/SSHPlus/ShellBot.sh" ]] && {
-				wget -qO- https://raw.githubusercontent.com/rodrigo12xd/SSHPLUS/master/Install/ShellBot.sh >/etc/SSHPlus/ShellBot.sh
+				wget -qO- https://raw.githubusercontent.com/alesonkleber/SSHAlesonKleber/master/Install/ShellBot.sh >/etc/SSHPlus/ShellBot.sh
 			}
             cd /etc/SSHPlus
             screen -dmS bot_plus ./bot $tokenbot $iduser >/dev/null 2>&1
